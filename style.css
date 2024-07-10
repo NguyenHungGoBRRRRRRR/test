@@ -1,0 +1,2321 @@
+body {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  background-color: #1a1a1a;
+  /* overflow: hidden; */
+}
+
+nav {
+  overflow: hidden;
+  position: absolute;
+  top: 5%;
+  right: 0;
+  left: 0;
+  width: 319px;
+  display: table;
+  margin: 0 auto;
+  transform: translateY(-50%);
+}
+
+nav a {
+  position: relative;
+  width: 33.333%;
+  display: table-cell;
+  text-align: center;
+  color: #949494;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: 0.2s ease color;
+  font-size: 30px;
+}
+
+nav a:before,
+nav a:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.2s ease transform;
+}
+
+nav a:before {
+  top: 0;
+  left: 10px;
+  width: 6px;
+  height: 6px;
+}
+
+nav a:after {
+  top: 5px;
+  left: 18px;
+  width: 4px;
+  height: 4px;
+}
+
+nav a:nth-child(1):before {
+  background-color: yellow;
+}
+
+nav a:nth-child(1):after {
+  background-color: greenyellow;
+}
+
+nav a:nth-child(2):before {
+  background-color: greenyellow;
+}
+
+nav a:nth-child(2):after {
+  background-color: green;
+}
+
+nav a:nth-child(3):before {
+  background-color: green;
+}
+
+nav a:nth-child(3):after {
+  background-color: cyan;
+}
+
+#indicator {
+  position: absolute;
+  left: 2%;
+  bottom: 0;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: 0.2s ease left;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav a:hover:before,
+nav a:hover:after {
+  transform: scale(1);
+}
+
+nav a:nth-child(1):hover ~ #indicator {
+  background: linear-gradient(130deg, yellow, greenyellow);
+}
+
+nav a:nth-child(2):hover ~ #indicator {
+  left: 33%;
+  background: linear-gradient(130deg, greenyellow, green);
+}
+
+nav a:nth-child(3):hover ~ #indicator {
+  left: 58%;
+  background: linear-gradient(130deg, green, cyan);
+}
+
+.container {
+  width: 1600px;
+  height: 400px;
+  background-color: #272727;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 300px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-image: linear-gradient(135deg, #272727 55%, white 55%);
+}
+
+.container h1 {
+  position: absolute;
+  font-size: 200px;
+  font-weight: 900;
+  font-family: inter;
+}
+
+.container .last-name {
+  margin-top: -10px;
+  margin-left: 30px;
+  color: white;
+}
+
+.container .first-name {
+  margin-left: 1040px;
+  margin-top: 150px;
+  color: #272727;
+}
+
+.container .typing {
+  font-family: Courier Prime;
+  position: absolute;
+  margin-top: 320px;
+  margin-left: 45px;
+  color: gray;
+  font-size: 30px;
+}
+
+.container2 {
+  width: 1600px;
+  height: 400px;
+  background-color: #272727;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 300px;
+}
+
+.container2 p {
+  font-family: Courier Prime;
+  color: white;
+  width: 550px;
+  height: 250px;
+  font-size: 40px;
+  margin-left: 100px;
+  padding-top: 4%;
+}
+
+.container2 span {
+  font-size: 50px;
+  background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 70%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Just Me Again Down Here;
+}
+
+.container3 {
+  font-family: Irish Grover;
+  text-align: center;
+  font-size: 300px;
+  margin-top: 350px;
+  background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.LIFE p {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  font-family: Courier Prime;
+  margin-top: -20px;
+}
+
+.infomation {
+  margin-top: 200px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.containerr {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.containerr::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #272727;
+  border: 4px solid white;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: -80px;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 5px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+.content h2 {
+  font-size: 40px;
+  text-align: center;
+  font-family: Irish Grover;
+}
+
+.content p {
+  font-size: 20px;
+  font-family: Courier Prime;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 849px) {
+  .timeline::after {
+    left: 120px;
+  }
+
+  .containerr {
+    width: 80%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .containerr::before {
+    left: 2px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  .left::after,
+  .right::after {
+    left: 185px;
+  }
+
+  .right {
+    left: -80px;
+  }
+}
+
+.typing {
+  overflow: hidden;
+  border-right: 0.15em solid #949494;
+  white-space: nowrap;
+  animation: typing 2s forwards;
+  font-size: 1.6rem;
+  width: 0;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 250px;
+  }
+}
+
+.container4 {
+  width: 100%;
+  height: 300px;
+  margin-top: 300px;
+  text-align: center;
+}
+
+.container4 .p {
+  font-family: Inter;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+}
+
+.container4 hr {
+  margin-top: -30px;
+  width: 500px;
+  height: 5px;
+  border: 0;
+  background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+}
+
+.container4 .gmail {
+  font-size: 30px;
+  color: white;
+  font-family: inter;
+}
+
+@media screen and (max-width: 720px) {
+  nav {
+    overflow: hidden;
+    position: absolute;
+    top: 5%;
+    right: 0;
+    left: 0;
+    width: 319px;
+    display: table;
+    margin: 0 auto;
+    transform: translateY(-50%);
+  }
+
+  nav a {
+    position: relative;
+    width: 33.333%;
+    display: table-cell;
+    text-align: center;
+    color: #949494;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: 0.2s ease color;
+    font-size: 20px;
+  }
+
+  nav a:before,
+  nav a:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.2s ease transform;
+  }
+
+  nav a:before {
+    top: 0;
+    left: 10px;
+    width: 6px;
+    height: 6px;
+  }
+
+  nav a:after {
+    top: 5px;
+    left: 18px;
+    width: 4px;
+    height: 4px;
+  }
+
+  nav a:nth-child(1):before {
+    background-color: yellow;
+  }
+
+  nav a:nth-child(1):after {
+    background-color: greenyellow;
+  }
+
+  nav a:nth-child(2):before {
+    background-color: greenyellow;
+  }
+
+  nav a:nth-child(2):after {
+    background-color: green;
+  }
+
+  nav a:nth-child(3):before {
+    background-color: green;
+  }
+
+  nav a:nth-child(3):after {
+    background-color: cyan;
+  }
+
+  #indicator {
+    position: absolute;
+    left: 3%;
+    bottom: 0;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: 0.2s ease left;
+  }
+
+  nav a:hover {
+    color: #fff;
+  }
+
+  nav a:hover:before,
+  nav a:hover:after {
+    transform: scale(1);
+  }
+
+  nav a:nth-child(1):hover ~ #indicator {
+    background: linear-gradient(130deg, yellow, greenyellow);
+  }
+
+  nav a:nth-child(2):hover ~ #indicator {
+    left: 33%;
+    background: linear-gradient(130deg, greenyellow, green);
+  }
+
+  nav a:nth-child(3):hover ~ #indicator {
+    left: 60%;
+    background: linear-gradient(130deg, green, cyan);
+  }
+  .container {
+    width: 400px;
+    height: 150px;
+    background-color: #272727;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-image: linear-gradient(135deg, #272727 55%, white 55%);
+  }
+
+  .container h1 {
+    position: absolute;
+    font-size: 50px;
+    font-weight: 900;
+    font-family: inter;
+  }
+
+  .container .last-name {
+    margin-top: 5px;
+    margin-left: 20px;
+    color: white;
+  }
+
+  .container .first-name {
+    margin-left: 250px;
+    margin-top: 77px;
+    color: #272727;
+  }
+
+  .container .typing {
+    font-family: Courier Prime;
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 25px;
+    color: gray;
+    font-size: 15px;
+  }
+
+  .typing {
+    overflow: hidden;
+    border-right: 0.15em solid #949494;
+    white-space: nowrap;
+    animation: typing 2s forwards;
+    font-size: 1.6rem;
+    width: 0;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 125px;
+    }
+  }
+
+  .container2 {
+    width: 400px;
+    height: 150px;
+    background-color: #272727;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+  }
+
+  .container2 p {
+    font-family: Courier Prime;
+    color: white;
+    width: 200px;
+    height: 250px;
+    font-size: 15px;
+    margin-left: 30px;
+    padding-top: 2%;
+  }
+
+  .container2 span {
+    font-size: 30px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 70%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Just Me Again Down Here;
+  }
+
+  .container3 {
+    font-family: Irish Grover;
+    text-align: center;
+    font-size: 100px;
+    margin-top: 200px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .LIFE p {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: Courier Prime;
+    margin-top: 0px;
+  }
+
+  .infomation {
+    margin-top: 100px;
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -60px;
+  }
+
+  .containerr {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+
+  .containerr::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #272727;
+    border: 4px solid white;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .left {
+    left: -58px;
+  }
+
+  .right {
+    left: -58px;
+  }
+
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  .right::after {
+    left: -16px;
+  }
+
+  .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+
+  .content h2 {
+    text-align: center;
+    font-family: Irish Grover;
+  }
+
+  .content p {
+    font-family: Courier Prime;
+  }
+
+  @media screen and (max-width: 720px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+      left: 31px;
+    }
+
+    .containerr {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+
+    .containerr::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+
+    .left::after,
+    .right::after {
+      left: 15px;
+    }
+  }
+
+  .container4 {
+    width: 100%;
+    height: 300px;
+    margin-top: 300px;
+    text-align: center;
+  }
+
+  .container4 .p {
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .container4 hr {
+    margin-top: -15px;
+    width: 400px;
+    height: 3px;
+    border: 0;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+  }
+
+  .container4 .gmail {
+    font-size: 20px;
+    color: white;
+    font-family: inter;
+    margin-top: -0.5px;
+  }
+}
+
+@media (min-width: 1601px) and (max-width: 1700px) {
+  .container {
+    width: 1500px;
+    height: 350px;
+    background-color: #272727;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-image: linear-gradient(135deg, #272727 55%, white 55%);
+  }
+
+  .container h1 {
+    position: absolute;
+    font-size: 180px;
+    font-weight: 900;
+    font-family: inter;
+  }
+
+  .container .last-name {
+    margin-top: -10px;
+    margin-left: 30px;
+    color: white;
+  }
+
+  .container .first-name {
+    margin-left: 1000px;
+    margin-top: 115px;
+    color: #272727;
+  }
+
+  .container .typing {
+    font-family: Courier Prime;
+    position: absolute;
+    margin-top: 270px;
+    margin-left: 45px;
+    color: gray;
+    font-size: 25px;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
+  }
+
+  .container2 {
+    width: 1500px;
+    height: 350px;
+    background-color: #272727;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+  }
+
+  .container2 p {
+    font-family: Courier Prime;
+    color: white;
+    width: 550px;
+    height: 250px;
+    font-size: 40px;
+    margin-left: 100px;
+    padding-top: 3%;
+  }
+
+  .container2 span {
+    font-size: 55px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 70%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Just Me Again Down Here;
+  }
+
+  .container3 {
+    font-family: Irish Grover;
+    text-align: center;
+    font-size: 230px;
+    margin-top: 350px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .LIFE p {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-family: Courier Prime;
+    margin-top: -20px;
+  }
+}
+
+@media (min-width: 1501px) and (max-width: 1600px) {
+  .container {
+    width: 1400px;
+    height: 350px;
+    background-color: #272727;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-image: linear-gradient(135deg, #272727 55%, white 55%);
+  }
+
+  .container h1 {
+    position: absolute;
+    font-size: 180px;
+    font-weight: 900;
+    font-family: inter;
+  }
+
+  .container .last-name {
+    margin-top: -10px;
+    margin-left: 30px;
+    color: white;
+  }
+
+  .container .first-name {
+    margin-left: 890px;
+    margin-top: 115px;
+    color: #272727;
+  }
+
+  .container .typing {
+    font-family: Courier Prime;
+    position: absolute;
+    margin-top: 270px;
+    margin-left: 45px;
+    color: gray;
+    font-size: 25px;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
+  }
+
+  .container2 {
+    width: 1400px;
+    height: 350px;
+    background-color: #272727;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+  }
+
+  .container2 p {
+    font-family: Courier Prime;
+    color: white;
+    width: 550px;
+    height: 250px;
+    font-size: 40px;
+    margin-left: 100px;
+    padding-top: 3%;
+  }
+
+  .container2 span {
+    font-size: 55px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 70%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Just Me Again Down Here;
+  }
+
+  .container3 {
+    font-family: Irish Grover;
+    text-align: center;
+    font-size: 200px;
+    margin-top: 350px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .LIFE p {
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    font-family: Courier Prime;
+    margin-top: -20px;
+  }
+}
+
+@media (min-width: 1401px) and (max-width: 1500px) {
+  .container {
+    width: 1300px;
+    height: 350px;
+    background-color: #272727;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-image: linear-gradient(135deg, #272727 55%, white 55%);
+  }
+
+  .container h1 {
+    position: absolute;
+    font-size: 160px;
+    font-weight: 900;
+    font-family: inter;
+  }
+
+  .container .last-name {
+    margin-top: -10px;
+    margin-left: 30px;
+    color: white;
+  }
+
+  .container .first-name {
+    margin-left: 850px;
+    margin-top: 140px;
+    color: #272727;
+  }
+
+  .container .typing {
+    font-family: Courier Prime;
+    position: absolute;
+    margin-top: 270px;
+    margin-left: 45px;
+    color: gray;
+    font-size: 25px;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
+  }
+
+  .container2 {
+    width: 1300px;
+    height: 350px;
+    background-color: #272727;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+  }
+
+  .container2 p {
+    font-family: Courier Prime;
+    color: white;
+    width: 550px;
+    height: 250px;
+    font-size: 40px;
+    margin-left: 100px;
+    padding-top: 3%;
+  }
+
+  .container2 span {
+    font-size: 55px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 70%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Just Me Again Down Here;
+  }
+
+  .container3 {
+    font-family: Irish Grover;
+    text-align: center;
+    font-size: 200px;
+    margin-top: 350px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .LIFE p {
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    font-family: Courier Prime;
+    margin-top: -20px;
+  }
+}
+@media (min-width: 1260px) and (max-width: 1400px) {
+  .container {
+    width: 1200px;
+    height: 350px;
+    background-color: #272727;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-image: linear-gradient(135deg, #272727 55%, white 55%);
+  }
+
+  .container h1 {
+    position: absolute;
+    font-size: 150px;
+    font-weight: 900;
+    font-family: inter;
+  }
+
+  .container .last-name {
+    margin-top: -10px;
+    margin-left: 30px;
+    color: white;
+  }
+
+  .container .first-name {
+    margin-left: 780px;
+    margin-top: 150px;
+    color: #272727;
+  }
+
+  .container .typing {
+    font-family: Courier Prime;
+    position: absolute;
+    margin-top: 270px;
+    margin-left: 45px;
+    color: gray;
+    font-size: 25px;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
+  }
+
+  .container2 {
+    width: 1200px;
+    height: 350px;
+    background-color: #272727;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+  }
+
+  .container2 p {
+    font-family: Courier Prime;
+    color: white;
+    width: 550px;
+    height: 250px;
+    font-size: 40px;
+    margin-left: 100px;
+    padding-top: 3%;
+  }
+
+  .container2 span {
+    font-size: 55px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 70%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Just Me Again Down Here;
+  }
+
+  .container3 {
+    font-family: Irish Grover;
+    text-align: center;
+    font-size: 200px;
+    margin-top: 350px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .LIFE p {
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    font-family: Courier Prime;
+    margin-top: -20px;
+  }
+}
+
+@media (min-width: 1260px) and (max-width: 1329px) {
+  .infomation {
+    margin-top: 200px;
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+
+  /* Container around content */
+  .containerr {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+
+  /* The circles on the timeline */
+  .containerr::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #272727;
+    border: 4px solid white;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  /* Place the container to the left */
+  .left {
+    left: -80px;
+  }
+
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+
+  /* The actual content */
+  .content {
+    padding: 5px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+
+  .content h2 {
+    font-size: 40px;
+    text-align: center;
+    font-family: Irish Grover;
+  }
+
+  .content p {
+    font-size: 20px;
+    font-family: Courier Prime;
+  }
+}
+
+@media (min-width: 1150px) and (max-width: 1259px) {
+  .container {
+    width: 1100px;
+    height: 330px;
+    background-color: #272727;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-image: linear-gradient(135deg, #272727 55%, white 55%);
+  }
+
+  .container h1 {
+    position: absolute;
+    font-size: 140px;
+    font-weight: 900;
+    font-family: inter;
+  }
+
+  .container .last-name {
+    margin-top: 0px;
+    margin-left: 30px;
+    color: white;
+  }
+
+  .container .first-name {
+    margin-left: 700px;
+    margin-top: 140px;
+    color: #272727;
+  }
+
+  .container .typing {
+    font-family: Courier Prime;
+    position: absolute;
+    margin-top: 240px;
+    margin-left: 45px;
+    color: gray;
+    font-size: 25px;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
+  }
+
+  .container2 {
+    width: 1100px;
+    height: 330px;
+    background-color: #272727;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+  }
+
+  .container2 p {
+    font-family: Courier Prime;
+    color: white;
+    width: 550px;
+    height: 250px;
+    font-size: 40px;
+    margin-left: 100px;
+    padding-top: 3%;
+  }
+
+  .container2 span {
+    font-size: 55px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 70%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Just Me Again Down Here;
+  }
+
+  .container3 {
+    font-family: Irish Grover;
+    text-align: center;
+    font-size: 200px;
+    margin-top: 350px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .LIFE p {
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    font-family: Courier Prime;
+    margin-top: -20px;
+  }
+
+  .infomation {
+    margin-top: 200px;
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+
+  /* Container around content */
+  .containerr {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+
+  /* The circles on the timeline */
+  .containerr::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #272727;
+    border: 4px solid white;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  /* Place the container to the left */
+  .left {
+    left: -80px;
+  }
+
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+
+  /* The actual content */
+  .content {
+    padding: 5px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+
+  .content h2 {
+    font-size: 40px;
+    text-align: center;
+    font-family: Irish Grover;
+  }
+
+  .content p {
+    font-size: 20px;
+    font-family: Courier Prime;
+  }
+
+  .container4 {
+    width: 100%;
+    height: 300px;
+    margin-top: 300px;
+    text-align: center;
+  }
+
+  .container4 .p {
+    font-family: Inter;
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .container4 hr {
+    margin-top: -30px;
+    width: 500px;
+    height: 5px;
+    border: 0;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+  }
+
+  .container4 .gmail {
+    font-size: 30px;
+    color: white;
+    font-family: inter;
+  }
+}
+
+@media (min-width: 1050px) and (max-width: 1149px) {
+  .container {
+    width: 1000px;
+    height: 330px;
+    background-color: #272727;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-image: linear-gradient(135deg, #272727 55%, white 55%);
+  }
+
+  .container h1 {
+    position: absolute;
+    font-size: 130px;
+    font-weight: 900;
+    font-family: inter;
+  }
+
+  .container .last-name {
+    margin-top: 0px;
+    margin-left: 30px;
+    color: white;
+  }
+
+  .container .first-name {
+    margin-left: 630px;
+    margin-top: 150px;
+    color: #272727;
+  }
+
+  .container .typing {
+    font-family: Courier Prime;
+    position: absolute;
+    margin-top: 240px;
+    margin-left: 45px;
+    color: gray;
+    font-size: 25px;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
+  }
+
+  .container2 {
+    width: 1000px;
+    height: 330px;
+    background-color: #272727;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+  }
+
+  .container2 p {
+    font-family: Courier Prime;
+    color: white;
+    width: 450px;
+    height: 250px;
+    font-size: 33px;
+    margin-left: 60px;
+    padding-top: 3%;
+  }
+
+  .container2 span {
+    font-size: 55px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 70%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Just Me Again Down Here;
+  }
+
+  .container3 {
+    font-family: Irish Grover;
+    text-align: center;
+    font-size: 200px;
+    margin-top: 350px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .LIFE p {
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    font-family: Courier Prime;
+    margin-top: -20px;
+  }
+
+  .infomation {
+    margin-top: 200px;
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+
+  /* Container around content */
+  .containerr {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+
+  /* The circles on the timeline */
+  .containerr::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #272727;
+    border: 4px solid white;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  /* Place the container to the left */
+  .left {
+    left: -80px;
+  }
+
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+
+  /* The actual content */
+  .content {
+    padding: 5px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+
+  .content h2 {
+    font-size: 40px;
+    text-align: center;
+    font-family: Irish Grover;
+  }
+
+  .content p {
+    font-size: 20px;
+    font-family: Courier Prime;
+  }
+
+  .container4 {
+    width: 100%;
+    height: 300px;
+    margin-top: 300px;
+    text-align: center;
+  }
+
+  .container4 .p {
+    font-family: Inter;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .container4 hr {
+    margin-top: -20px;
+    width: 500px;
+    height: 5px;
+    border: 0;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+  }
+
+  .container4 .gmail {
+    font-size: 30px;
+    color: white;
+    font-family: inter;
+  }
+}
+
+@media (min-width: 950px) and (max-width: 1049px) {
+  .container {
+    width: 900px;
+    height: 300px;
+    background-color: #272727;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-image: linear-gradient(135deg, #272727 55%, white 55%);
+  }
+
+  .container h1 {
+    position: absolute;
+    font-size: 120px;
+    font-weight: 900;
+    font-family: inter;
+  }
+
+  .container .last-name {
+    margin-top: 0px;
+    margin-left: 30px;
+    color: white;
+  }
+
+  .container .first-name {
+    margin-left: 550px;
+    margin-top: 140px;
+    color: #272727;
+  }
+
+  .container .typing {
+    font-family: Courier Prime;
+    position: absolute;
+    margin-top: 230px;
+    margin-left: 45px;
+    color: gray;
+    font-size: 23px;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 200px;
+    }
+  }
+
+  .container2 {
+    width: 900px;
+    height: 300px;
+    background-color: #272727;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+  }
+
+  .container2 p {
+    font-family: Courier Prime;
+    color: white;
+    width: 350px;
+    height: 250px;
+    font-size: 25px;
+    margin-left: 60px;
+    padding-top: 4%;
+  }
+
+  .container2 span {
+    font-size: 55px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 70%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Just Me Again Down Here;
+  }
+
+  .container3 {
+    font-family: Irish Grover;
+    text-align: center;
+    font-size: 200px;
+    margin-top: 350px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .LIFE p {
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    font-family: Courier Prime;
+    margin-top: -20px;
+  }
+
+  .infomation {
+    margin-top: 200px;
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+
+  /* Container around content */
+  .containerr {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+
+  /* The circles on the timeline */
+  .containerr::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #272727;
+    border: 4px solid white;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  /* Place the container to the left */
+  .left {
+    left: -80px;
+  }
+
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+
+  /* The actual content */
+  .content {
+    padding: 5px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+
+  .content h2 {
+    font-size: 40px;
+    text-align: center;
+    font-family: Irish Grover;
+  }
+
+  .content p {
+    font-size: 20px;
+    font-family: Courier Prime;
+  }
+  .container4 {
+    width: 100%;
+    height: 300px;
+    margin-top: 300px;
+    text-align: center;
+  }
+
+  .container4 .p {
+    font-family: Inter;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .container4 hr {
+    margin-top: -30px;
+    width: 500px;
+    height: 5px;
+    border: 0;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+  }
+
+  .container4 .gmail {
+    font-size: 30px;
+    color: white;
+    font-family: inter;
+  }
+  .container4 {
+    width: 100%;
+    height: 300px;
+    margin-top: 300px;
+    text-align: center;
+  }
+
+  .container4 .p {
+    font-family: Inter;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .container4 hr {
+    margin-top: -15px;
+    width: 500px;
+    height: 5px;
+    border: 0;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+  }
+
+  .container4 .gmail {
+    font-size: 30px;
+    color: white;
+    font-family: inter;
+  }
+}
+
+@media (min-width: 850px) and (max-width: 949px) {
+  .container {
+    width: 800px;
+    height: 300px;
+    background-color: #272727;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-image: linear-gradient(135deg, #272727 55%, white 55%);
+  }
+
+  .container h1 {
+    position: absolute;
+    font-size: 100px;
+    font-weight: 900;
+    font-family: inter;
+  }
+
+  .container .last-name {
+    margin-top: 10px;
+    margin-left: 30px;
+    color: white;
+  }
+
+  .container .first-name {
+    margin-left: 510px;
+    margin-top: 160px;
+    color: #272727;
+  }
+
+  .container .typing {
+    font-family: Courier Prime;
+    position: absolute;
+    margin-top: 230px;
+    margin-left: 45px;
+    color: gray;
+    font-size: 23px;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 200px;
+    }
+  }
+
+  .container2 {
+    width: 800px;
+    height: 300px;
+    background-color: #272727;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+  }
+
+  .container2 p {
+    font-family: Courier Prime;
+    color: white;
+    width: 350px;
+    height: 250px;
+    font-size: 25px;
+    margin-left: 60px;
+    padding-top: 4%;
+  }
+
+  .container2 span {
+    font-size: 55px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 70%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Just Me Again Down Here;
+  }
+
+  .container3 {
+    font-family: Irish Grover;
+    text-align: center;
+    font-size: 200px;
+    margin-top: 350px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .LIFE p {
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    font-family: Courier Prime;
+    margin-top: -20px;
+  }
+
+  .infomation {
+    margin-top: 200px;
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+
+  /* Container around content */
+  .containerr {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+
+  /* The circles on the timeline */
+  .containerr::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #272727;
+    border: 4px solid white;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  /* Place the container to the left */
+  .left {
+    left: -80px;
+  }
+
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+
+  /* The actual content */
+  .content {
+    padding: 5px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+
+  .content h2 {
+    font-size: 40px;
+    text-align: center;
+    font-family: Irish Grover;
+  }
+
+  .content p {
+    font-size: 20px;
+    font-family: Courier Prime;
+  }
+
+  .container4 {
+    width: 100%;
+    height: 300px;
+    margin-top: 300px;
+    text-align: center;
+  }
+  
+  .container4 .p {
+    font-family: Inter;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .container4 hr {
+    margin-top: -15px;
+    width: 500px;
+    height: 5px;
+    border: 0;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+  }
+  
+  .container4 .gmail {
+    font-size: 30px;
+    color: white;
+    font-family: inter;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 849px) {
+  .container {
+    width: 650px;
+    height: 200px;
+    background-color: #272727;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-image: linear-gradient(135deg, #272727 55%, white 55%);
+  }
+
+  .container h1 {
+    position: absolute;
+    font-size: 80px;
+    font-weight: 900;
+    font-family: inter;
+  }
+
+  .container .last-name {
+    margin-top: 10px;
+    margin-left: 30px;
+    color: white;
+  }
+
+  .container .first-name {
+    margin-left: 410px;
+    margin-top: 90px;
+    color: #272727;
+  }
+
+  .container .typing {
+    font-family: Courier Prime;
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 45px;
+    color: gray;
+    font-size: 16px;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 140px;
+    }
+  }
+
+  .container2 {
+    width: 650px;
+    height: 200px;
+    background-color: #272727;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+  }
+
+  .container2 p {
+    font-family: Courier Prime;
+    color: white;
+    width: 270px;
+    height: 150px;
+    font-size: 20px;
+    margin-left: 60px;
+    padding-top: 3%;
+  }
+
+  .container2 span {
+    font-size: 35px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 70%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Just Me Again Down Here;
+  }
+
+  .container3 {
+    font-family: Irish Grover;
+    text-align: center;
+    font-size: 150px;
+    margin-top: 350px;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .LIFE p {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: Courier Prime;
+    margin-top: -20px;
+  }
+
+  /* The actual content */
+  .content {
+    padding: 5px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    margin-left: 180px;
+  }
+
+  .content h2 {
+    font-size: 40px;
+    text-align: center;
+    font-family: Irish Grover;
+  }
+
+  .content p {
+    font-size: 20px;
+    font-family: Courier Prime;
+  }
+
+  .container4 {
+    width: 100%;
+    height: 300px;
+    margin-top: 300px;
+    text-align: center;
+  }
+  
+  .container4 .p {
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .container4 hr {
+    margin-top: -10px;
+    width: 500px;
+    height: 5px;
+    border: 0;
+    background: linear-gradient(60deg, #53bd42 25%, #ebff00 40%, #3390ad 55%);
+  }
+  
+  .container4 .gmail {
+    font-size: 30px;
+    color: white;
+    font-family: inter;
+  }
+}
